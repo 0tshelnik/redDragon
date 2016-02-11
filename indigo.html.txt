@@ -1,0 +1,14 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>GITHUB</title>
+</head>
+
+<body>
+<h1>GIT урок 2</h1>
+<p>новое изменение файла</p>
+</body>
+
+</html>
