@@ -38,7 +38,7 @@ public class Solution {
     static {
         allPeople.add(Person.createMale("Иванов Иван", new Date()));  //сегодня родился    id=0
         allPeople.add(Person.createMale("Петров Петр", new Date()));  //сегодня родился    id=1
-     //   allPeople.add(Person.createFemale(null, null));
+        //   allPeople.add(Person.createFemale(null, null));
     }
 
     public static void main(String[] args) throws IOException, ParseException
@@ -47,9 +47,8 @@ public class Solution {
         {
             if (args[0].equals("-c"))
             {
-                if (args.length <= 4)
-                {
-                    allPeople.add(Person.createMale(args[1], new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH).parse(args[5])));
+                if (args.length <= 4) {
+                    allPeople.add(Person.createMale(args[1], new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH).parse(args[3])));
 
                     if (args[2].equals("м")) {
                         allPeople.get(allPeople.size() - 1).setSex(Sex.MALE);
@@ -60,7 +59,7 @@ public class Solution {
 
                 } else
                 {
-                    allPeople.add(Person.createMale(args[1] + " " + args[2], new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH).parse(args[5])));
+                    allPeople.add(Person.createMale(args[1] + " " + args[2], new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH).parse(args[4])));
                     if (args[3].equals("м")) {
                         allPeople.get(allPeople.size() - 1).setSex(Sex.MALE);
 
@@ -76,7 +75,7 @@ public class Solution {
                 {
                     int id = Integer.valueOf(args[1]);
                     allPeople.get(id).setName(args[2]);
-                    allPeople.get(id).setBirthDay(new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH).parse(args[5]));
+                    allPeople.get(id).setBirthDay(new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH).parse(args[4]));
 
                     if (args[3].equals("м")) {
                         allPeople.get(id).setSex(Sex.MALE);
